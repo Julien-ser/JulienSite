@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block questions %}
+<div id="question-container">
+    <div class="question" id="question1">
+        <div class="question-title">
+          <h2 class="mb-0">Hi, I'm Julien Serbanescu</h2>
+        </div>
+        <p class="mb-0">Meet my current AI project, TBD. Enter something below to see it in action!</p>
+        <div class="d-flex flex-column input-box">
+          <input maxlength="300" id="custom_prompt" type="text" placeholder="Example: " class="form-control">
+        </div>
+    </div>
+<div class="flex-column align-items-center" id="question-btn">
+    <button id="next-btn" onclick="showCompletion()" class="btn btn-primary btn-lg">Next</button>
+</div>
+<div id="my-question">
+    <div class="d-flex gap-2 align-items-center mb-2">
+        <i class="fa fa-user" style="    background: rgb(255, 155, 127);
+        padding: 14px;
+        border-radius: 26px;"></i>
+        <p class="mb-0">U said:</p>
+    </div>
+    <p id="your-question"></p>
+</div>
+<div id="completion-container" class="">
+    <div class="d-flex gap-2 align-items-center mb-2">
+        <img src="{% static 'images/pfp.jpg' %}" alt="">
+        <p>Julien Says:</p>
+    </div>
+    <p id="completion"></p>
+    {{ result }}
+</div>
+{% endblock questions %}
+    
