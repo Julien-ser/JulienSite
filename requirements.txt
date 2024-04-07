@@ -69,7 +69,6 @@ depthai==2.24.0.0
 dill==0.3.6
 distlib==0.3.8
 distro==1.9.0
-Django==5.0.3
 dnspython==2.6.1
 doc2docx==0.2.4
 docstring_parser==0.16
